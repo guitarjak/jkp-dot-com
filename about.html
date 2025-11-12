@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Jakkrapat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/jakkrapat-fav.png">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Segoe UI"', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+              mono: ['"Courier Prime"', 'Courier', 'monospace'],
+              pixel: ['"VT323"', 'monospace'],
+            },
+            colors: {
+              win: {
+                teal: '#008080',
+                gray: '#c0c0c0',
+                blue: '#000080',
+                light: '#ffffff',
+                dark: '#000000',
+                shadow: '#808080',
+              }
+            },
+            boxShadow: {
+              'outset': '1.5px 1.5px 0px 1px #000000, inset 1.5px 1.5px 0px 1px #ffffff',
+              'inset': 'inset 1.5px 1.5px 0px 1px #000000, 1.5px 1.5px 0px 1px #ffffff',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #008080;
+        color: #000000;
+        overflow-y: auto;
+        overflow-x: hidden;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      ::-webkit-scrollbar {
+        width: 16px;
+        height: 16px;
+        background: #dfdfdf;
+      }
+      ::-webkit-scrollbar-track {
+        background: #dfdfdf;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c0c0c0;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        box-shadow: inset -1px -1px 0 #808080;
+      }
+      ::-webkit-scrollbar-button {
+        background: #c0c0c0;
+        width: 16px;
+        height: 16px;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        box-shadow: inset -1px -1px 0 #808080;
+        display: block;
+      }
+
+      .win-border-outset {
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #000000;
+        border-bottom: 2px solid #000000;
+        box-shadow: 1px 1px 0 #808080 inset, -1px -1px 0 #dfdfdf inset;
+      }
+      .win-border-inset {
+        border-top: 2px solid #808080;
+        border-left: 2px solid #808080;
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        box-shadow: 1px 1px 0 #000000 inset, -1px -1px 0 #dfdfdf inset;
+      }
+      
+      body {
+        cursor: url('Cursor79.cur'), auto;
+      }
+
+      /* Hide app tabs on mobile */
+      @media (max-width: 768px) {
+        .open-apps-taskbar {
+          display: none !important;
+        }
+      }
+    </style>
+</head>
+<body class="min-h-screen bg-win-teal font-sans pb-10">
+
+    <!-- Windows 98 Taskbar -->
+    <nav class="fixed bottom-0 left-0 right-0 z-50 bg-win-gray win-border-outset px-2 py-1 flex items-center justify-between shadow-lg">
+      <!-- Start Menu Button -->
+      <div class="relative">
+        <button id="start-btn" class="flex items-center gap-2 px-2 py-1 cursor-pointer hover:bg-blue-400 active:bg-blue-600 active:win-border-inset transition-colors win-border-outset text-sm font-bold" onclick="toggleStartMenu()">
+          <img src="https://win98icons.alexmeub.com/icons/png/windows_slanted-1.png" alt="logo" class="w-5 h-5" />
+          <span>Start</span>
+        </button>
+
+        <!-- Start Menu Popup -->
+        <div id="start-menu" class="hidden absolute bottom-full left-0 mb-1 w-56 bg-win-gray win-border-outset shadow-2xl z-50">
+          <!-- Menu Items -->
+          <div class="py-1">
+            <button onclick="location.href='index.html'" class="w-full text-left px-2 py-2 hover:bg-win-blue hover:text-white flex items-center gap-2 text-sm">
+              <img src="https://win98icons.alexmeub.com/icons/png/search_directory-5.png" class="w-4 h-4" />
+              Home
+            </button>
+            <button onclick="location.href='about.html'" class="w-full text-left px-2 py-2 hover:bg-win-blue hover:text-white flex items-center gap-2 text-sm">
+              <img src="https://win98icons.alexmeub.com/icons/png/computer_explorer-0.png" class="w-4 h-4" />
+              About Guitar
+            </button>
+            <button onclick="location.href='my_tool.html'" class="w-full text-left px-2 py-2 hover:bg-win-blue hover:text-white flex items-center gap-2 text-sm">
+              <img src="https://win98icons.alexmeub.com/icons/png/briefcase-2.png" class="w-4 h-4" />
+              My Tools
+            </button>
+            <button onclick="location.href='shop.html'" class="w-full text-left px-2 py-2 hover:bg-win-blue hover:text-white flex items-center gap-2 text-sm">
+              <span class="text-lg">🌐</span>
+              Shop
+            </button>
+            <button onclick="location.href='graveyard.html'" class="w-full text-left px-2 py-2 hover:bg-win-blue hover:text-white flex items-center gap-2 text-sm">
+              <span class="text-lg">⚰️</span>
+              Graveyard
+            </button>
+            <hr class="border-gray-400 my-1">
+            <button onclick="location.href='contact.html'" class="w-full text-left px-2 py-2 hover:bg-win-blue hover:text-white flex items-center gap-2 text-sm">
+              <img src="https://win98icons.alexmeub.com/icons/png/modem-5.png" class="w-4 h-4" />
+              Contact Me
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Open Apps Taskbar -->
+      <div class="flex items-center gap-1 mx-2 flex-1 open-apps-taskbar">
+        <button onclick="location.href='about.html'" class="px-3 py-1 win-border-inset bg-win-gray text-xs font-bold whitespace-nowrap" style="min-width: fit-content;">
+          <span>📄 About Guitar</span>
+        </button>
+        <button onclick="location.href='shop.html'" class="px-3 py-1 win-border-outset hover:bg-gray-200 text-xs font-bold whitespace-nowrap" style="min-width: fit-content;">
+          <span>🌐 Shop</span>
+        </button>
+        <button onclick="location.href='graveyard.html'" class="px-3 py-1 win-border-outset hover:bg-gray-200 text-xs font-bold whitespace-nowrap" style="min-width: fit-content;">
+          <span>⚰️ Graveyard</span>
+        </button>
+      </div>
+
+      <!-- Retro Icons and Clock -->
+      <div class="flex items-center gap-1 ml-auto">
+        <!-- Retro Icons -->
+        <button class="p-1 text-lg" title="Internet Explorer">
+          🌐
+        </button>
+        <button class="p-1 text-lg" title="My Computer">
+          💾
+        </button>
+        <button class="p-1 text-lg" title="Sound">
+          🔊
+        </button>
+
+        <!-- Digital Clock -->
+        <div class="px-2 py-1 ml-1 min-w-max">
+          <span id="clock" class="font-mono text-xs font-bold">00:00</span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 space-y-10 max-w-5xl">
+
+
+        <section id="bio">
+          <div class="bg-win-gray win-border-outset flex flex-col shadow-xl">
+            <div class="bg-win-blue px-2 py-1 flex justify-between items-center select-none">
+              <div class="flex items-center gap-2">
+                  <img src="https://img.icons8.com/?size=100&id=121624&format=png&color=000000" class="w-4 h-4" alt="Bio icon" />
+                  <span class="text-white font-bold font-sans text-sm tracking-wide line-clamp-1">Personal Bio</span>
+              </div>
+              <div class="flex gap-1 shrink-0">
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-win-gray win-border-outset flex items-center justify-center active:win-border-inset cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </div>
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-win-gray win-border-outset flex items-center justify-center active:win-border-inset cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                </div>
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-win-gray win-border-outset flex items-center justify-center ml-1 active:win-border-inset cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-1 flex-1 flex flex-col min-h-0">
+              <div class="bg-white win-border-inset p-4 h-full overflow-auto">
+                <div class="flex flex-col items-center mb-4">
+                  <img src="images/Guitar-Close-Up.png" alt="Jakkrapat" class="w-48 h-48 rounded-lg border-4 border-win-gray shadow-lg mb-4" />
+                </div>
+                <div class="space-y-4 text-center">
+                  <p>ผมโตมาในครอบครัวใหญ่<br> ญาติๆ มีธุรกิจส่วนตัวกัน <br>แต่ถ้านับแค่บ้านผมเองก็ฐานะกลางๆ<br> พอมีกินไม่ได้อด แต่ก็ไม่ถึงกับรวย <br>.<br>​ บ้านผมค่อนข้างประหยัด ทุกๆ เช้าตอนตีห้า<br> คุณแม่จะเข้ามาในห้องแล้วหยิบรีโมทบอกว่า<br> ปิดแอร์ได้แล้ว ค่าไฟมันแพง<br>​(มีกฎเวลาเปิดปิดแอร์ด้วยนะ 4ทุ่ม - ตี5 ฮ่าา)<br>.<br>​วันที่เรียนจบมหาลัยออกมา<br>​คนรอบๆ ตัวถามผมว่า<br>​"ตกลงรู้ยังว่าอยากทำงานอะไร"<br> ผมจำวันนั้นได้เลย ผมไม่รู้ ผมตอบไม่ได้ <br>เหมือนกับเด็กหลงทางในชีวิตเลย</p>
+
+                  <p>จำได้ว่าตอนนั้นช่วงโควิดพอดี<br> ธุรกิจที่แม่ผมทำอยู่ก็มีปัญหา<br>.<br>ผมเลยบอกแม่ว่า ไม่เป็นไรม๊า<br>​เดี๋ยวหางานทำที่นี่ ไม่ต้องส่งเงินมาแล้วนะ<br>เรียนจบแล้ว ดูแลตัวเองได้แล้ว<br>.<br> ผมเริ่มด้วยการไปเป็นเด็กฝึกงาน<br>ที่บริษัทสื่อแห่งนึงในกรุงเทพ<br> (ตอนนั้นงานก็หายากเกิ้นน)<br> แต่โชคดียังได้เข้าไป ฮ่าๆ<br>.<br>จำได้เลยผมได้เงินเดือน 16,000 บาท<br> โดนหักนู่นนี่แหละประมาณ​ 14,500 นิดๆ<br> ประหยัดๆ เอา พอใช้อยู่ปริ่มๆ<br>ได้เก็บบ้างนิดหน่อย</p>
+
+                  <p>ผ่านไป 1 ปี ผมบอกอดีตแฟน<br>(ปัจจุบันเป็นภรรยาแล้วครับ ฮ่าา)<br> ว่า เราย้ายไปภูเก็ตกันมั้ย<br>ที่กรุงเทพค่าใช้จ่ายสูง<br> ถ้ากลับบ้านอย่างน้อยน่าจะลดรายจ่ายได้บ้าง<br> อาจจะพอให้ชีวิตพวกเราตั้งหลักกันได้<br>.<br> เลยชวนวิวลงมาที่ภูเก็ต<br>และเอาเงินเก็บทั้งหมดที่มี<br>มาลงทุนทำร้านทำเล็บกัน <br>(ซึ่งก็ไม่ได้ไปได้สวยขนาดนั้น<br> แต่ก็มีพอให้พวกเราไม่อดตาย ฮ่าา)</p>
+                  
+                  <p>ทำไปซักพัก ก็ได้ย้ายเข้ามา<br>อยู่สายงานโรงเรียนทั้ง 2 คนเลย<br>(ผมและภรรยา) เป็นธุรกิจของคุณยาย<br> เราก็รับเงินเดือนกันปกติ<br>.<br>บอกตรงๆ ว่าขยับตัวสะดวกขึ้นมาหน่อย<br>พอมีเหลือเก็บกันมากขึ้<br>.<br> ทำไปได้ปีนึงเราก็มีโอกาส<br>ได้ไปเรียนต่อที่อังกฤษกันทั้งคู่<br>จำได้ว่าเลือกมหาลัยที่ค่าเทอมถูกที่สุด<br> เพราะไม่อยากรบกวนที่บ้านเยอะ<br>.<br>โชคดีของผมที่ป้า น้า กับยาย<br>ช่วย Support เราในช่วงนั้น</p>
+
+                  <p>มหาลัยที่ไปเรียนต่อปริญญาโท<br> ไม่ค่อยมีเด็กอังกฤษซักเท่าไหร่<br> ส่วนใหญ่เป็นต่างชาติ (แบบพวกเรา)<br> ซะมากกว่า ก็มีอินเดีย จีน ไทย <br>ไนจีเรีย อะไรพวกนี้<br>.<br>พอเรียนจบก็กลับมาที่ไทย<br>มีการวางแผนจะแต่งงาน<br> เราก็เงินกันได้เกือบถึงเป้าแล้ว<br> จุดเปลี่ยนมันคือวันที่ผมบอกภรรยาว่า<br>.<br>"บี้ เอาเงินที่เราเก็บมา<br>มาซื้อคริปโตนี้ไหม (ETH) <br>เพื่อนบอกว่ามันขึ้นแน่ๆ" <br>(ผมรู้ ใจเย็น อย่าเพิ่งด่ากันน) <br>แล้วก็อย่างที่ทุกคนเดาออกแหละครับ <br>ผ่านไป 3 เดือน<br>.<br> เงินก้อนนี้เหลือออกมาหลักสิบ<br> <b>"เงินเกือบล้านที่เก็บกันมาเหลือหลักสิบ"</b><br>อ่านไม่ผิดครับ</p>
+
+                  <p>เหลือเวลาอีก 3 เดือนจะถึงวันแต่งงาน<br> ผมทำเงินเก็บทั้งหมดของเราหายไปหมดเลย<br> ช่วงนั้นมืดแปดด้าน...<br> เงินก้อนนี้เราเก็บกันมาเกือบ 4 ปี<br>แล้วผมจะหายังไงทัน<br>.<br> ช่วงนั้นจำได้ว่าภรรยาบอกว่า<br>"ไม่ต้องแต่งแล้ว ยกเลิกทุกอย่างเถอะ<br>มันพังหมดแล้ว ยังไงก็ไม่มีทางหามาทัน"<br>.<br>ผมเคว้งไปหมดเลย หน้าชา หัวตัน<br>ช่วงนั้นจำได้ว่านอนแค่วันละ 2-3 ชั่วโมง<br>เป็นเดือนๆ ชีวิตมันแย่ไปหมด</p>
+
+                  <p>สุดท้ายก็ยังไม่ได้ยุบงานแต่งนะครับ<br> ทุกอย่างดำเนินไปตามปกติ<br>.<br> แม่กับป้าผมก็พยายามบอกว่าไม่เป็นไร<br>คนเราผิดพลาดกันได้ <br>และช่วยโดยการให้เงินมาส่วนนึง<br>.<br> ที่เหลือก็มีไปหยิบยืมจากน้องชาย<br> เพื่อน และคนอื่นๆ มาจนครบ<br> ภรรยาผมบอกว่า<br>เมื่อไหร่จะใช้คืนทุกคนหมด<br> เงินไม่ใช่น้อยๆ</p>
+
+                  <p>หลังจากวันนั้นผมฮึดขึ้นมาใหม่<br> หนๆ ก็ตื่นตี 2-3 เพื่อมานั่งเศร้าทุกวันอยู่แล้วนี่<br> เอาเวลามาเริ่มศึกษาเรื่อง AI<br> เรื่องการสร้างรายได้ออนไลน์<br> การทำ Website ต่างๆ<br>.<br>อะไรก็ได้ที่จะทำให้เราพอมี<br>มุมออนไลน์เล็กๆ ของเราบนอินเตอร์เน็ต<br>โดยใช้เงินน้อยที่สุด<br> (หรือไม่ใช้เงินเลย)<br>เพราะนึกไม่ออกเลยลำพังแค่งานประจำ<br>เดือนละ 3-4 หมื่นจะหาคืนทุกคนยังไง</p>
+
+                  <p>ผมเริ่มทำเพจ เริ่มลองขาย<br>ก็ลองผิดๆ ถูกๆ อยู่ 4-5 เดือนแหละ<br>และเข้าเดือนที่ 6-7 เชื่อไหม<br> เงินที่ผมเคยทำหายไป<br>ตอนนี้ผมหามันมาได้ใน 1 เดือน<br>.<br> ผมพยายามศึกษาต่อมาเรื่อยๆ<br>ซึ่งตอนนี้ถ้าจะบอกว่ามั่นคง 100% ไหม<br>ผมก็ตอบตรงๆ ว่ายัง<br>แต่ผมก็ลาออกจากงานประจำ<br>เพื่อมาลองกับมันดูซักตั้งแล้ว ฮ่าา</p>
+
+                  <p>ภาพที่ผมเคยนึกไว้ตอนเด็กๆ<br> มันเกือบเหมือนชีวิตผมตอนนี้เลย<br>.<br>ผมทำงานที่ไหนก็ได้<br>ผมมีตารางเวลางานของตัวเอง<br>ผมสนุกกับงานที่ทำมาก<br> ผมมีอิสระในการใช้ชีวิตมากขึ้น<br>.<br>เหนือสิ่งอื่นใด เวลาไปกินข้าวกับครอบครัว<br>ผมสามารถพูดได้เลยว่า<br> ม๊าป๊าอยากกินอะไรสั่งได้เลยนะ ไม่ต้องดูราคา<br>ซึ่งเอาตรงๆ ผมไม่เคยนึกว่าจะทำได้เลย แหะๆ</p>
+
+                  <p>ทั้งหมดก็จาก "การเรียนรู้แบบติดสปีด" + "แรงกดดัน" + คานงัดที่สำคัญที่สุดคือ "ออนไลน์"</p>
+
+                  <p>และนี่ก็คือเรื่องราวสั้นๆ (มั้ยนะ555) เกี่ยวกับผม<br>ก็หวังว่าจะรู้จักกันมากขึ้น<br>และเป็นแรงให้คนที่กำลังล้มอยู่ตอนนี้<br>ฮึดสู้ขึ้นมาได้บ้างนะครับ<br>ถ้าเล่าเต็มคงอ่านกันไม่จบ ยาวม้าก555</p>
+
+                  <p>สู้ๆ ครับ เส้นชัยอยู่ไม่ไกลแล้ว<br> ผมเชียร์คุณอยู่อีกฝั่งของหน้าจอนะ ❤️</p>
+                    
+                  
+                </div>
+              </div>
+            </div>
+            <div class="px-2 py-1 text-xs border-t border-win-shadow/20 text-gray-600 flex justify-between bg-win-gray">
+              <span>Document</span>
+              <span class="hidden sm:inline">Personal Bio</span>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section id="fun-facts">
+          <div class="bg-win-gray win-border-outset flex flex-col shadow-xl">
+            <div class="bg-win-blue px-2 py-1 flex justify-between items-center select-none">
+              <div class="flex items-center gap-2">
+                  <img src="https://img.icons8.com/?size=100&id=121624&format=png&color=000000" class="w-4 h-4" alt="Fun Facts icon" />
+                  <span class="text-white font-bold font-sans text-sm tracking-wide line-clamp-1">Fun Facts</span>
+              </div>
+              <div class="flex gap-1 shrink-0">
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-win-gray win-border-outset flex items-center justify-center active:win-border-inset cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </div>
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-win-gray win-border-outset flex items-center justify-center active:win-border-inset cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
+                </div>
+                <div class="w-4 h-4 md:w-5 md:h-5 bg-win-gray win-border-outset flex items-center justify-center ml-1 active:win-border-inset cursor-pointer">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="p-1 flex-1 flex flex-col min-h-0">
+              <div class="bg-white win-border-inset p-4 h-full overflow-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="p-4 border border-gray-200">
+                    <h3 class="font-bold mb-2 text-win-blue">ชื่อนี้ ท่านได้แต่ใดมา?</h3>
+                    <p>คุณพ่อผมชอบเล่นกีตาร์ เลยตั้งชื่อผมว่ากีตาร์ ม๊าบอกจริงๆ จะให้น้องชายชื่อกลอง (ไม่รู้ที่บ้านจะตั้งวงดนตรีหรืออะไร ฮ่าๆ) แต่ไปๆ มาๆ คนเรียกเพี้ยนเป็นก้อง นั้นแหละ เลยกลายมาเป็น กีตาร์-ก้อง</p>
+                  </div>
+                  <div class="p-4 border border-gray-200">
+                    <h3 class="font-bold mb-2 text-win-blue">งานอดิเรกสุดแปลก</h3>
+                    <p>ผมเพิ่งรู้ตัวเหมือนกันว่าเป็นคนชอบ Tweak (ดัดแปลง) เช่น ผมชอบเอาคอมเก่าๆ มาลงระบบปฎิบัติการที่ทำให้มันใช้ได้อีกครั้ง ชอบเอาโทรศัพทืเก่าๆ มาติดตั้ง Android แบบดัดแปลง (ทั้งๆ ที่ก็ไม่ได้มีความรู้เรื่องนี้นะ แค่ชอบ55)</p>
+                  </div>
+                  <div class="p-4 border border-gray-200">
+                    <h3 class="font-bold mb-2 text-win-blue">จบสายเทคมาหรอ?</h3>
+                    <p>ป่าวเลยครับ ผมเรียนจบนิเทศธรรมดาๆ นี่แหละ แต่บังเอิญชอบเกี่ยวกับเรื่องเทคเรื่องอะไรใหม่ๆ มีโอกาสก็ลองเล่นไปเรื่อยๆ เล่นไปเล่นมาก็เริ่มใช้ได้ใช้เป็น แต่ถามว่าเก่ง 100% เข้าใจทั้งหมดมั้ย ตอบตรงๆ ว่า ม่ายยย5555</p>
+                  </div>
+                  <div class="p-4 border border-gray-200">
+                    <h3 class="font-bold mb-2 text-win-blue">ชอบ "ของเก่า"</h3>
+                    <p>อีกอย่างนึงคือผมชอบของเก่าๆ เห็นแล้วมันทำให้นึกย้อนความหลังอะ เช่นอยากกลับไปใช้มือถือเก่า อยากได้รถเก่าปี 1950 อยากใช้คอมพิวเตอร์เก่าๆ (เป็นที่มาของหน้าตาเว็บแบบนี้55) ผมรู้สึกเหมือนมี Connection กับของเก่าแปลกๆ ฮ่าา</p>
+                  </div>
+                  <div class="p-4 border border-gray-200">
+                    <h3 class="font-bold mb-2 text-win-blue">ชอบ Automation แหละ</h3>
+                    <p>อันนี้มองจากดาวอังคารก็ดูออก ผมขี้เกียจ อะไรที่ทำแล้วไม่ค่อยมี Value คืนมาเช่นนั่งคลิ้กๆๆ ซ้ำๆ ผมจับมา Automate หมดแหละ มีช่วงนี้บ้าขนาดกับพยายาม Automate งานเพื่อนคนอื่นๆ ไปด้วย แหะๆ</p>
+                  </div>
+                  <div class="p-4 border border-gray-200">
+                    <h3 class="font-bold mb-2 text-win-blue">อภิมหาพารานอย</h3>
+                    <p>เอาจริง สารภาพว่าผมขี้กังวลมาก55555 เชื่อมั้ยเวลาผมฟังอะไรดีๆ ต้องรีบมาจดกลัวลืม แถมจดนี่ต้องหาที่เก็บหลายๆ ที่อีกนะ กลัวหาย555555 ง่ายๆ คือเป็นคนคิดมาก คิดไปเรื่อยๆ จนต้องเตือนตัวเองว่า หยุ๊ดดด</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-2 py-1 text-xs border-t border-win-shadow/20 text-gray-600 flex justify-between bg-win-gray">
+              <span>6 object(s) selected</span>
+              <span class="hidden sm:inline">Fun Facts</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+    <footer class="text-center text-white text-xs font-mono opacity-60 pb-4">
+         © 2025 Jakkrapat. All rights reserved.
+    </footer>
+
+    <script>
+      // Start Menu Toggle
+      function toggleStartMenu() {
+        const menu = document.getElementById('start-menu');
+        menu.classList.toggle('hidden');
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const startBtn = document.getElementById('start-btn');
+        const startMenu = document.getElementById('start-menu');
+        if (!startBtn.contains(event.target) && !startMenu.contains(event.target)) {
+          startMenu.classList.add('hidden');
+        }
+      });
+
+      // Digital Clock
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        document.getElementById('clock').textContent = `${hours}:${minutes}`;
+      }
+
+      // Update clock every minute
+      updateClock();
+      setInterval(updateClock, 60000);
+
+      // Mobile menu toggle functionality
+      document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+    </script>
+</body>
+</html>
