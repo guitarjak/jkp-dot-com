@@ -1,0 +1,22 @@
+[
+  {
+    "session_id": "12ad5418-34bf-4a7a-8743-a415cfd6549e",
+    "transcript_path": "/Users/guitar/.claude/projects/-Users-guitar-Desktop-jakkrapat-dom-com-jkp-dot-com/12ad5418-34bf-4a7a-8743-a415cfd6549e.jsonl",
+    "cwd": "/Users/guitar/Desktop/jakkrapat-dom-com/jkp-dot-com",
+    "permission_mode": "default",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false,
+    "agent_id": "06870575",
+    "agent_transcript_path": "/Users/guitar/.claude/projects/-Users-guitar-Desktop-jakkrapat-dom-com-jkp-dot-com/agent-06870575.jsonl"
+  },
+  {
+    "session_id": "12ad5418-34bf-4a7a-8743-a415cfd6549e",
+    "transcript_path": "/Users/guitar/.claude/projects/-Users-guitar-Desktop-jakkrapat-dom-com-jkp-dot-com/12ad5418-34bf-4a7a-8743-a415cfd6549e.jsonl",
+    "cwd": "/Users/guitar/Desktop/jakkrapat-dom-com/jkp-dot-com",
+    "permission_mode": "default",
+    "hook_event_name": "SubagentStop",
+    "stop_hook_active": false,
+    "agent_id": "d5fe40c1",
+    "agent_transcript_path": "/Users/guitar/.claude/projects/-Users-guitar-Desktop-jakkrapat-dom-com-jkp-dot-com/agent-d5fe40c1.jsonl"
+  }
+]
